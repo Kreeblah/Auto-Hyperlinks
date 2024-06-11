@@ -75,7 +75,7 @@ static NSCharacterSet *s_skipCharacterSet	= nil;
 static NSCharacterSet *s_startCharacterSet = nil;
 
 #pragma mark -
-#pragma mark Initalization
+#pragma mark Initialization
 
 + (void)initialize
 {
@@ -233,7 +233,7 @@ static NSCharacterSet *s_startCharacterSet = nil;
 		return YES;
 	}
 
-	/* Two seperate arrays exist so an app can specify its own defaults in
+	/* Two separate arrays exist so an app can specify its own defaults in
 	 NSUserDefaults while allowing a user to whitelist additional schemes,
 	 without having to respecify the app's original. */
 	NSArray<NSString *> *permittedSchemesDefaults = [[NSUserDefaults standardUserDefaults] arrayForKey:@"com.adiumX.AutoHyperlinks.permittedSchemesDefault"];
@@ -426,8 +426,8 @@ static NSCharacterSet *s_startCharacterSet = nil;
 
 	NSUInteger encMaxLength = NSMaxRange(range);
 
-	NSRange result = NSMakeRange(0, 0); // A value msut be defined
-	
+	NSRange result = NSMakeRange(0, 0); // A value must be defined
+
 	while (encScanLocation < encMaxLength)
 	{
 		[self _scanString:scanString upToCharactersFromSet:s_enclosureCharacterSet intoRange:nil withIndex:&encScanLocation];
@@ -505,7 +505,7 @@ static NSCharacterSet *s_startCharacterSet = nil;
 		return NO;
 	}
 
-	// Asorb s_skipCharacterSet
+	// Absorb s_skipCharacterSet
 	NSUInteger firstIndex;
 
 	for (firstIndex = indexIn; firstIndex < scanLength; firstIndex++) {
@@ -557,7 +557,7 @@ static NSCharacterSet *s_startCharacterSet = nil;
 		return NO;
 	}
 
-	// Asorb s_skipCharacterSet
+	// Absorb s_skipCharacterSet
 	NSUInteger firstIndex;
 
 	for (firstIndex = indexIn; firstIndex < scanLength; firstIndex++) {
